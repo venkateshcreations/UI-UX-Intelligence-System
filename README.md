@@ -296,6 +296,12 @@ User Input (context/input.json)
 2. **Run Pipeline** — Execute `node pipeline/runner.js` to start the system
 3. **Review Output** — Check `output/final.json` for the generated deliverables
 
+
+## Initiation To Your Enterprise Software:
+1. Copy entire folder and paste in your project directory
+2. Edit 'ask-to-ai.md'(your enterprise project requirements)
+3. Give 'ask-to-ai.md' to any AI coding platform to generate output 
+
 ---
 
 ## License
