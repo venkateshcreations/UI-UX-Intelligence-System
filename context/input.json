@@ -1,0 +1,76 @@
+{
+
+  "context_mode": "generate",
+
+  "project": {
+    "name": "AI Resume Analyzer",
+    "type": "Web Application",
+    "platform": ["Web", "Mobile Responsive"]
+  },
+  "objective": {
+    "primary": "Help users analyze and improve resumes using AI",
+    "secondary": [
+      "Increase user engagement",
+      "Provide instant actionable feedback",
+      "Enable resume generation"
+    ]
+  },
+  "user_personas": [
+    {
+      "type": "Job Seeker",
+      "experience": "0-5 years",
+      "goals": [
+        "Improve resume",
+        "Get job quickly"
+      ],
+      "pain_points": [
+        "Don't know what to improve",
+        "Confusing formatting",
+        "Low response rate"
+      ]
+    }
+  ],
+  "features": [
+    "Upload Resume",
+    "AI Analysis",
+    "Score & Feedback",
+    "Suggestions",
+    "Resume Builder",
+    "Download Resume"
+  ],
+  "constraints": {
+    "tech": [
+      "Frontend-only app",
+      "Uses AI APIs",
+      "No backend required"
+    ],
+    "design": [
+      "Dark and Light mode",
+      "Modern UI",
+      "Mobile-first"
+    ]
+  },
+  "inputs": {
+    "user_actions": [
+      "Upload file",
+      "View analysis",
+      "Edit resume",
+      "Download output"
+    ]
+  },
+  "success_metrics": {
+    "activation": "User completes first analysis",
+    "engagement": "Time spent on suggestions",
+    "conversion": "Resume download rate"
+  },
+  "output_expectations": {
+    "format": "Structured JSON + UI-ready content",
+    "includes": [
+      "UX flows",
+      "UI structure",
+      "Copy",
+      "Evaluation score",
+      "Improvement suggestions"
+    ]
+  }
+}
