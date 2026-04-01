@@ -1,0 +1,59 @@
+{
+  "stages": [
+    {
+      "name": "cognition",
+      "agents": [
+        "product-strategist",
+        "user-intent-modeler",
+        "ux-psychologist",
+        "behavioral-economist",
+        "cognitive-load-analyst"
+      ]
+    },
+    {
+      "name": "execution",
+      "agents": [
+        "experience-designer",
+        "interaction-architect",
+        "component-architect",
+        "ui-systems-engineer",
+        "visual-designer",
+        "copywriter-agent"
+      ]
+    },
+    {
+      "name": "simulation",
+      "agents": [
+        "persona-engine",
+        "behavior-simulator",
+        "frustration-simulator",
+        "novice-user"
+      ]
+    },
+    {
+      "name": "evaluation",
+      "agents": [
+        "usability-auditor",
+        "heuristic-evaluator",
+        "cognitive-friction-tester",
+        "ui-polish-agent"
+      ]
+    },
+    {
+      "name": "memory",
+      "agents": [
+        "pattern-learner",
+        "decision-recorder",
+        "success-metrics"
+      ]
+    }
+  ],
+  "loops": {
+    "evaluation_loop": {
+      "trigger": "if score < 8",
+      "repeat_stage": "execution",
+      "max_iterations": 3
+    }
+  }
+}
+

@@ -1,0 +1,388 @@
+{
+  "agents": [
+
+    // ---------------- COGNITION LAYER ----------------
+    {
+      "name": "product-strategist",
+      "layer": "cognition",
+      "inputs": ["market-data", "user-research"],
+      "outputs": ["product-strategy", "priorities"],
+      "dependencies": []
+    },
+    {
+      "name": "ux-psychologist",
+      "layer": "cognition",
+      "inputs": ["user-behavior", "flows"],
+      "outputs": ["behavior-insights"],
+      "dependencies": ["product-strategist"]
+    },
+    {
+      "name": "interaction-architect",
+      "layer": "cognition",
+      "inputs": ["user-journeys"],
+      "outputs": ["interaction-flows"],
+      "dependencies": ["product-strategist"]
+    },
+    {
+      "name": "information-architect",
+      "layer": "cognition",
+      "inputs": ["content", "tasks"],
+      "outputs": ["sitemap"],
+      "dependencies": ["product-strategist"]
+    },
+    {
+      "name": "design-theorist",
+      "layer": "cognition",
+      "inputs": ["ui-design"],
+      "outputs": ["principle-validation"],
+      "dependencies": ["visual-designer"]
+    },
+    {
+      "name": "cognitive-load-analyst",
+      "layer": "cognition",
+      "inputs": ["ui-flows"],
+      "outputs": ["load-report"],
+      "dependencies": ["ux-psychologist"]
+    },
+    {
+      "name": "user-intent-modeler",
+      "layer": "cognition",
+      "inputs": ["behavior"],
+      "outputs": ["intent-map"],
+      "dependencies": ["ux-psychologist"]
+    },
+    {
+      "name": "behavioral-economist",
+      "layer": "cognition",
+      "inputs": ["flows", "goals"],
+      "outputs": ["nudges"],
+      "dependencies": ["ux-psychologist", "cognitive-load-analyst"]
+    },
+    {
+      "name": "trust-designer",
+      "layer": "cognition",
+      "inputs": ["ui"],
+      "outputs": ["trust-signals"],
+      "dependencies": ["behavioral-economist"]
+    },
+    {
+      "name": "onboarding-strategist",
+      "layer": "cognition",
+      "inputs": ["flows"],
+      "outputs": ["onboarding-flow"],
+      "dependencies": ["user-intent-modeler"]
+    },
+
+    // ---------------- EXECUTION LAYER ----------------
+    {
+      "name": "experience-designer",
+      "layer": "execution",
+      "inputs": ["product-strategy"],
+      "outputs": ["user-journeys"],
+      "dependencies": ["product-strategist"]
+    },
+    {
+      "name": "ui-systems-engineer",
+      "layer": "execution",
+      "inputs": ["ui-design"],
+      "outputs": ["design-system"],
+      "dependencies": ["experience-designer"]
+    },
+    {
+      "name": "component-architect",
+      "layer": "execution",
+      "inputs": ["ui-layout"],
+      "outputs": ["components"],
+      "dependencies": ["ui-systems-engineer"]
+    },
+    {
+      "name": "layout-engineer",
+      "layer": "execution",
+      "inputs": ["ui"],
+      "outputs": ["grid"],
+      "dependencies": ["experience-designer"]
+    },
+    {
+      "name": "visual-designer",
+      "layer": "execution",
+      "inputs": ["layout"],
+      "outputs": ["visual-style"],
+      "dependencies": ["layout-engineer"]
+    },
+    {
+      "name": "microinteraction-designer",
+      "layer": "execution",
+      "inputs": ["interactions"],
+      "outputs": ["motion-specs"],
+      "dependencies": ["interaction-architect"]
+    },
+    {
+      "name": "frontend-architect",
+      "layer": "execution",
+      "inputs": ["components"],
+      "outputs": ["code-structure"],
+      "dependencies": ["component-architect"]
+    },
+    {
+      "name": "design-token-engine",
+      "layer": "execution",
+      "inputs": ["design-system"],
+      "outputs": ["tokens"],
+      "dependencies": ["ui-systems-engineer"]
+    },
+    {
+      "name": "responsive-engineer",
+      "layer": "execution",
+      "inputs": ["layouts"],
+      "outputs": ["responsive-rules"],
+      "dependencies": ["layout-engineer"]
+    },
+    {
+      "name": "dark-mode-specialist",
+      "layer": "execution",
+      "inputs": ["tokens"],
+      "outputs": ["dark-theme"],
+      "dependencies": ["design-token-engine"]
+    },
+    {
+      "name": "branding-integrator",
+      "layer": "execution",
+      "inputs": ["brand-guidelines"],
+      "outputs": ["styled-ui"],
+      "dependencies": ["visual-designer"]
+    },
+    {
+      "name": "copywriter-agent",
+      "layer": "execution",
+      "inputs": ["flows"],
+      "outputs": ["microcopy"],
+      "dependencies": ["behavioral-economist"]
+    },
+    {
+      "name": "form-designer",
+      "layer": "execution",
+      "inputs": ["forms"],
+      "outputs": ["form-ux"],
+      "dependencies": ["cognitive-load-analyst"]
+    },
+    {
+      "name": "navigation-designer",
+      "layer": "execution",
+      "inputs": ["sitemap"],
+      "outputs": ["navigation"],
+      "dependencies": ["information-architect"]
+    },
+    {
+      "name": "dashboard-specialist",
+      "layer": "execution",
+      "inputs": ["data"],
+      "outputs": ["dashboard-ui"],
+      "dependencies": ["visual-designer"]
+    },
+
+    // ---------------- EVALUATION ----------------
+    {
+      "name": "usability-auditor",
+      "layer": "evaluation",
+      "inputs": ["ui"],
+      "outputs": ["usability-report"],
+      "dependencies": ["experience-designer"]
+    },
+    {
+      "name": "accessibility-ai",
+      "layer": "evaluation",
+      "inputs": ["ui"],
+      "outputs": ["accessibility-report"],
+      "dependencies": ["visual-designer"]
+    },
+    {
+      "name": "heuristic-evaluator",
+      "layer": "evaluation",
+      "inputs": ["ui"],
+      "outputs": ["heuristic-report"],
+      "dependencies": ["usability-auditor"]
+    },
+    {
+      "name": "aesthetic-critic",
+      "layer": "evaluation",
+      "inputs": ["ui"],
+      "outputs": ["visual-feedback"],
+      "dependencies": ["visual-designer"]
+    },
+    {
+      "name": "performance-analyst",
+      "layer": "evaluation",
+      "inputs": ["frontend"],
+      "outputs": ["performance-report"],
+      "dependencies": ["frontend-architect"]
+    },
+    {
+      "name": "consistency-checker",
+      "layer": "evaluation",
+      "inputs": ["design-system"],
+      "outputs": ["consistency-report"],
+      "dependencies": ["ui-systems-engineer"]
+    },
+    {
+      "name": "error-state-reviewer",
+      "layer": "evaluation",
+      "inputs": ["errors"],
+      "outputs": ["error-improvements"],
+      "dependencies": ["copywriter-agent"]
+    },
+    {
+      "name": "edge-case-auditor",
+      "layer": "evaluation",
+      "inputs": ["flows"],
+      "outputs": ["edge-cases"],
+      "dependencies": ["stress-tester"]
+    },
+    {
+      "name": "cognitive-friction-tester",
+      "layer": "evaluation",
+      "inputs": ["flows"],
+      "outputs": ["friction-report"],
+      "dependencies": ["cognitive-load-analyst"]
+    },
+    {
+      "name": "ui-polish-agent",
+      "layer": "evaluation",
+      "inputs": ["ui"],
+      "outputs": ["final-ui"],
+      "dependencies": ["aesthetic-critic", "consistency-checker"]
+    },
+
+    // ---------------- SIMULATION ----------------
+    {
+      "name": "persona-engine",
+      "layer": "simulation",
+      "inputs": ["user-data"],
+      "outputs": ["personas"],
+      "dependencies": []
+    },
+    {
+      "name": "behavior-simulator",
+      "layer": "simulation",
+      "inputs": ["flows"],
+      "outputs": ["behavior-results"],
+      "dependencies": ["persona-engine"]
+    },
+    {
+      "name": "frustration-simulator",
+      "layer": "simulation",
+      "inputs": ["flows"],
+      "outputs": ["frustration-points"],
+      "dependencies": ["behavior-simulator"]
+    },
+    {
+      "name": "speed-runner",
+      "layer": "simulation",
+      "inputs": ["flows"],
+      "outputs": ["fast-path"],
+      "dependencies": ["behavior-simulator"]
+    },
+    {
+      "name": "novice-user",
+      "layer": "simulation",
+      "inputs": ["flows"],
+      "outputs": ["novice-insights"],
+      "dependencies": ["persona-engine"]
+    },
+    {
+      "name": "power-user",
+      "layer": "simulation",
+      "inputs": ["flows"],
+      "outputs": ["power-insights"],
+      "dependencies": ["persona-engine"]
+    },
+    {
+      "name": "accessibility-simulator",
+      "layer": "simulation",
+      "inputs": ["ui"],
+      "outputs": ["accessibility-insights"],
+      "dependencies": ["accessibility-ai"]
+    },
+    {
+      "name": "stress-tester",
+      "layer": "simulation",
+      "inputs": ["system"],
+      "outputs": ["stress-report"],
+      "dependencies": ["performance-analyst"]
+    },
+
+    // ---------------- MEMORY ----------------
+    {
+      "name": "pattern-learner",
+      "layer": "memory",
+      "inputs": ["outputs"],
+      "outputs": ["patterns"],
+      "dependencies": ["decision-recorder"]
+    },
+    {
+      "name": "decision-recorder",
+      "layer": "memory",
+      "inputs": ["decisions"],
+      "outputs": ["logs"],
+      "dependencies": []
+    },
+    {
+      "name": "feedback-integrator",
+      "layer": "memory",
+      "inputs": ["feedback"],
+      "outputs": ["improvements"],
+      "dependencies": ["design-evolution"]
+    },
+    {
+      "name": "design-evolution",
+      "layer": "memory",
+      "inputs": ["versions"],
+      "outputs": ["history"],
+      "dependencies": ["decision-recorder"]
+    },
+    {
+      "name": "success-metrics",
+      "layer": "memory",
+      "inputs": ["metrics"],
+      "outputs": ["kpi-report"],
+      "dependencies": ["product-strategist"]
+    },
+
+    // ---------------- ORCHESTRATION ----------------
+    {
+      "name": "master-orchestrator",
+      "layer": "orchestration",
+      "inputs": ["all"],
+      "outputs": ["final-output"],
+      "dependencies": ["pipeline-manager", "quality-gatekeeper"]
+    },
+    {
+      "name": "critique-loop-manager",
+      "layer": "orchestration",
+      "inputs": ["evaluation"],
+      "outputs": ["iterations"],
+      "dependencies": ["usability-auditor", "heuristic-evaluator"]
+    },
+    {
+      "name": "pipeline-manager",
+      "layer": "orchestration",
+      "inputs": ["tasks"],
+      "outputs": ["pipeline"],
+      "dependencies": ["task-distributor"]
+    },
+    {
+      "name": "task-distributor",
+      "layer": "orchestration",
+      "inputs": ["tasks"],
+      "outputs": ["assigned-tasks"],
+      "dependencies": []
+    },
+    {
+      "name": "quality-gatekeeper",
+      "layer": "orchestration",
+      "inputs": ["final-ui"],
+      "outputs": ["approved"],
+      "dependencies": ["ui-polish-agent"]
+    }
+
+  ]
+}

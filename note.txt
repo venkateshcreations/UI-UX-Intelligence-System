@@ -1,0 +1,14 @@
+Step-by-step automated runtime:
+User Input ([PASTE YOUR IDEA IN THIS FILE -- UNDER ##TASK]) → /context/input.json
+********************************************************************************************************************
+(Claude Code, Google Antigravity, Opencode, Qwen Coder, Cursor, Windsurf Any Ai Coding LLM loaded CLI will follow below automation with agents)
+********************************************************************************************************************
+Cognition Layer → understanding (Automation)
+Execution Layer → UI creation (Automation)
+Simulation Lab → test with personas (Automation)
+Evaluation Layer → score UX (Automation)
+If bad → loop back (Automation)
+Memory Layer → learn patterns (Automation)
+**********************************************
+Output → /output/final.json
+(You will get the final project output files in 'Output' folder)
