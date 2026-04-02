@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Type: AI System](https://img.shields.io/badge/Type-AI%20System-blue.svg)](https://github.com/venkateshcreations/UI-UX-Intelligence-System)
+[![Framework: Multi-Agent](https://img.shields.io/badge/Framework-Multi--Agent-green.svg)](https://github.com/venkateshcreations/UI-UX-Intelligence-System)
+
 # UI/UX Intelligence System
 
 **Author:** Venkatesh Ammireddy
